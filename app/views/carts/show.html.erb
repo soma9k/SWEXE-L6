@@ -1,0 +1,8 @@
+<% @cart.each do |e| %>
+    <p> 
+        <%= hidden_field_tag :name, @cart_item.name %>、
+        <%= hidden_field_tag :price, @cart_item.price %>、
+        <%= e.qty %>
+        <%= link_to 'カートから削除', "/carts/#{e.id}", method: :delete %> 
+    </p> 
+<% end %>

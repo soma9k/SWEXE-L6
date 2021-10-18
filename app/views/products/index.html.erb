@@ -1,0 +1,16 @@
+<% @product.each do |e| %>
+  <p>
+    <%= e.name %>
+    <%= e.price %>
+    <%= link_to '削除', product_path(e), method: :delete %>
+    <%= link_to 'カート追加', new_cart_item_path %>
+    </p>
+<% end %>
+
+<p>
+  <%= link_to '商品を追加する', new_product_path %>
+</p>
+
+<p>
+  <%= link_to 'カートを見る', "/carts/show" %>
+</p>
